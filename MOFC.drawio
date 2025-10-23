@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.7" pages="13">
   <diagram name="Stage-1" id="oyTWszHKQuYAoLMAasmB">
-    <mxGraphModel dx="1680" dy="1152" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1584" dy="826" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -100,14 +100,14 @@
         <mxCell id="ixU0c1UM425IJ_seZsLQ-11" value="APB&lt;div&gt;Arbitter&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=0;glass=0;verticalAlign=middle;fontSize=17;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
           <mxGeometry x="840" y="300" width="90" height="420" as="geometry" />
         </mxCell>
-        <mxCell id="vBhBGm2CNSY9niryPrPT-1" value="APB&lt;div&gt;Master&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=90;fontColor=#0000FF;" vertex="1" parent="1">
-          <mxGeometry x="880" y="368" width="60" height="30" as="geometry" />
+        <mxCell id="vBhBGm2CNSY9niryPrPT-4" value="&lt;br&gt;&lt;div&gt;Slave&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=90;fontStyle=3;fontColor=#FF3333;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="742" y="412" width="60" height="34" as="geometry" />
         </mxCell>
-        <mxCell id="vBhBGm2CNSY9niryPrPT-4" value="APB&lt;div&gt;Slave&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=90;fontStyle=3;fontColor=#FF3333;" vertex="1" parent="1">
-          <mxGeometry x="825" y="414" width="60" height="30" as="geometry" />
+        <mxCell id="vBhBGm2CNSY9niryPrPT-7" value="Master" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=90;fontStyle=3;fontColor=#0000FF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="378" width="60" height="34" as="geometry" />
         </mxCell>
-        <mxCell id="vBhBGm2CNSY9niryPrPT-5" value="APB&lt;div&gt;Master&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=90;fontColor=#0000FF;" vertex="1" parent="1">
-          <mxGeometry x="880" y="660" width="60" height="30" as="geometry" />
+        <mxCell id="vBhBGm2CNSY9niryPrPT-8" value="Master" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=90;fontStyle=3;fontColor=#0000FF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="990" y="660" width="60" height="34" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
