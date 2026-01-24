@@ -93,9 +93,9 @@ def SpiRegRead(Addr):
     return(RetVal)
 
 def SpiRegWrite(Addr,Data):
-    SpiDev.send_uint32(0x80+Addr)
-    RetVal = SpiDev.receive_uint32() 
-    return(RetVal)
+    SpiDev.send_uint32((Addr<<24)+Data)
+    #RetVal = SpiDev.receive_uint32() 
+    #return(RetVal)
 
 
 def read_xl_config_msg(xlsx_file, sheet_name, msg_col='W',msg_rows=(2,37)):
@@ -142,21 +142,50 @@ def read_xl_config_msg(xlsx_file, sheet_name, msg_col='W',msg_rows=(2,37)):
 
     return(df)
 
+
+#%%
+# SpiDev = RS232Device(port="COM5")
+# for Addr in [8,9,0xa,0xb]:
+#     ReadData = SpiRegRead(Addr)
+#     print(f'Addr= {hex(Addr)}, RegReadData:={hex(ReadData)}')
+# SpiDev.close()
+
+#%%
+# SpiDev = RS232Device(port="COM5")
+# SpiRegWrite(0xb,0x123456)
+# SpiDev.close()
+
+#%%
+# SpiDev = RS232Device(port="COM5")
+# SpiRegWrite(0x3,0x170405)
+# SpiRegRead(0x3)
+# SpiDev.close()
+
 import time
 if __name__ == "__main__":
-    SpiDev = RS232Device(port="COM3")
+    SpiDev = RS232Device(port="COM5")
 
-    xlsx_file = "C:/Users/guyiz/Documents/Work/CDRP/MOFC//MOFC_GUI_TEST1.2.xlsx"
+#    xlsx_file = "C:/Users/guyiz/Documents/Work/CDRP/MOFC//MOFC_GUI_TEST1.2.xlsx"
+    xlsx_file = "C:/Users/guyiz/Documents/Work/CDRP/MOFC//MOFC_GUI_TEST1.3_macros.xlsm"
     sheet_name = "MOFC_ASSIGN"
     df =read_xl_config_msg(xlsx_file, sheet_name)
     for idx, row in df.iterrows():
-        print(idx, row['DecAddr'] ,row['DecVal'])
-        #SpiRegWrite(row['DecAddr'],row['DecVal'])
+        print(f'{idx}, {row['DecAddr']} ,{row['DecVal']:08X}')
+        SpiRegWrite(row['DecAddr'],row['DecVal'])
 
     SpiDev.close()
-    for i in range (3):
-        print(i)
-        time.sleep(1)
+
+
+
+
+
+
+
+
+
+    # for i in range (3):
+    #     print(i)
+    #     time.sleep(1)
 #     dev = RS232Device(port="COM3")  # Linux: /dev/ttyUSB0
 
 #     try:
@@ -173,19 +202,19 @@ if __name__ == "__main__":
 #%%
 
 #%%
-Sub SendCfgMsg()
+# Sub SendCfgMsg()
 
-    Dim pythonExe As String
-    Dim scriptPath As String
-    Dim cmd As String
+#     Dim pythonExe As String
+#     Dim scriptPath As String
+#     Dim cmd As String
 
-    pythonExe = "C:\Users\guyiz\anaconda3\python.exe"
-    scriptPath = "C:\Users\guyiz\Documents\Work\CDRP\MOFC\PYTHON\MOFC_SERIAL_COM.py"
+#     pythonExe = "C:\Users\guyiz\anaconda3\python.exe"
+#     scriptPath = "C:\Users\guyiz\Documents\Work\CDRP\MOFC\PYTHON\MOFC_SERIAL_COM.py"
 
-    cmd = "cmd /k """ & pythonExe & " " & scriptPath & """"
-    cmd = pythonExe & " " & scriptPath
-    Shell cmd, vbNormalFocus
+#     cmd = "cmd /k """ & pythonExe & " " & scriptPath & """"
+#     cmd = pythonExe & " " & scriptPath
+#     Shell cmd, vbNormalFocus
 
 
 
-End Sub
+# End Sub
